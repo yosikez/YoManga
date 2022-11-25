@@ -47,10 +47,15 @@ function potong(str, jumlahKata) {
     return str.split(" ").splice(0, jumlahKata).join(" ");
 }
 
+function whell(){
+    total += 1;
+    url = urlData(offset, total, search)
+    getData(url);
+}
 
 
 async function getData(url) {
-    await fetch(url, { mode: 'no-cors'})
+    await fetch(url)
         .then((res) => { return res.json() })
         .then((data) => { dataManga = data })
 
@@ -73,7 +78,7 @@ async function getData(url) {
                                 <h3 class="manga-title">${title}</h3>
                                     <div class="card-body">
                                     <img src="${urlm}" alt="${title}">
-                                    <p class="desc"> ${ desc = (!description) ? description: potong(description, 15)} ...</p>
+                                    <p class="desc"> ${ desc = (!description) ? description: potong(description, 15)}...</p>
                                     </div>
                               </div>`
             }
