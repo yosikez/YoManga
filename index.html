@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Library</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+    <nav>
+        <div class="nav-brand">
+            <i class='bx bx-book-alt bx-md'></i>
+            <a href="">Yo Manga</a>
+        </div>
+        <div class="nav-items">
+            <a href="">Home</a>
+            <a href="">Genre</a>
+            <a href="">Collection</a>
+            <input type="search" name="search" id="search" oninput="searchMangaByTitle()">
+            <i class='bx bx-search-alt'></i>
+        </div>
+    </nav>
+    <div class="all">
+
+
+        <div id="testing"></div>
+
+
+        <div class="inputan">
+            <input type="number" id="number" name="number" min="1" class="number" oninput="getValue()" value="6">
+            <div class="tekan">
+                <button id="prev" onclick="prev()">Prev</button>
+                <button id="next" onclick="next()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
