@@ -50,7 +50,7 @@ function potong(str, jumlahKata) {
 
 
 async function getData(url) {
-    await fetch(url)
+    await fetch(url, { mode: 'no-cors'})
         .then((res) => { return res.json() })
         .then((data) => { dataManga = data })
 
